@@ -5,13 +5,16 @@ document.querySelector('#pay-bill-btn').addEventListener('click', () => {
     const pin = getValueFromInput('pay-bill-pin');
 
 
-    if (bankSelect != 'Select Bank' && bankNumber.length == 11 && amount > 0 && checkPin(pin)) {
+    if (bankSelect != 'Select Bank' && bankNumber.length == 11 && amount > 0 && amount <= getCurrentBalance() && checkPin(pin)) {
         updateBalance(getCurrentBalance() - parseFloat(amount));
         alert(`Successfully paid ${amount} to ${bankSelect} account number ${bankNumber} at ${new Date()}`);
         history('Pay Bill', new Date().toLocaleString());
     }
     else if (bankSelect == 'Select Bank') {
         alert('Please select a bank');
+    }
+    else if (amount > getCurrentBalance()) {
+        alert('Insufficient balance to pay the bill');
     }
     else if (bankNumber.length != 11) {
         alert('Bank account number must be 11 digits long');
