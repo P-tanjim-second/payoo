@@ -9,3 +9,7 @@ function getCurrentBalance() {
 function updateBalance(amount) {
     document.getElementById('balance').innerText = parseFloat(amount).toFixed(2);
 }
+function checkPin(givenPin) {
+    const correctPin = '1234';
+    return givenPin === correctPin;
+}
