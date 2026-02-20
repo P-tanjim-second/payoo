@@ -51,7 +51,8 @@
                 out charge is low and </p>
 
             <div id="buttons" class="buttons grid grid-cols-3 gap-4">
-                <button class="btn border-2 text-white bg-primary button flex-col h-full py-3 btn-primary btn-soft rounded-xl">
+                <button
+                    class="btn border-2 text-white bg-primary button flex-col h-full py-3 btn-primary btn-soft rounded-xl">
                     <img src="assets/opt-1.png" alt="">
                     <p class="font-normal">Add Money</p>
                 </button>
@@ -86,7 +87,7 @@
                         <label class="text-neutral/70 text-base font-medium">Select A Bank</label>
                         <select id="add-money-bank" class="select w-full bg-base-200 rounded-full px-5 " required>
                             <option disabled selected>Select Bank</option>
-                            <option value="CITY" >City Bank</option>
+                            <option value="CITY">City Bank</option>
                             <option value="ISLAMI">Islami Bank</option>
                             <option value="IPSC">IPSC Bank</option>
                         </select>
@@ -97,7 +98,8 @@
                             value="" required />
 
                         <label class="text-base text-neutral/70 font-medium">Amount To Add</label>
-                        <input id="add-money-input" type="number" class="input bg-base-200 w-full rounded-full px-5 py-6"
+                        <input id="add-money-input" type="number"
+                            class="input bg-base-200 w-full rounded-full px-5 py-6"
                             placeholder="Enter amount to withdraw" required />
 
                         <label class="text-base text-neutral/70 font-medium">4 Digit Pin</label>
@@ -135,6 +137,23 @@
                             Money</button>
                     </fieldset>
                 </div>
+            </div>
+        </section>
+
+        <section></section>
+
+        <section></section>
+
+        <section></section>
+
+        <section class="history hidden w-11/12 mx-auto py-5">
+            <div class="flex justify-between">
+                <h2 class="text-xl font-bold mb-4">Transaction History</h2>
+                <p class="text-[14px] text-neutral/50 cursor-pointer">View All</p>
+            </div>
+
+            <div class="history-container">
+                <!-- data will come from machine.js file -->
             </div>
         </section>
     </main>

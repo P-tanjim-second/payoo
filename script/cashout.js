@@ -17,6 +17,7 @@ document.getElementById('cashout-btn').addEventListener('click', () => {
     if (checkPin(pin) && agentNumber.length === 11) {
         const newBalance = (currentBalance - parseFloat(amount)).toFixed(2);
         updateBalance(newBalance);
+        history('Cash Out', new Date().toLocaleString());
         alert('Cash Out successful!');
         return;
     }

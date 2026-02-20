@@ -7,6 +7,7 @@ document.getElementById('add-money-btn').addEventListener('click', () => {
     if (bank != 'Select Bank' && bankNumber.length == 11 && amount > 0 && checkPin(pin)) {
         updateBalance(getCurrentBalance() + parseFloat(amount));
         alert(`Successfully added ${amount} from ${bank} account number ${bankNumber} at ${new Date()}`);
+        history('Add Money', new Date().toLocaleString());
     }
     else if (bank == 'Select Bank') {
         alert('Please select a bank');
